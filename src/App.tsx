@@ -1,14 +1,24 @@
 import React from "react";
-import logo from "./logo.svg";
+import Map from "react-map-gl";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello SF Precinct Vis</p>
+        <p>SF Precinct Vis</p>
       </header>
+
+      <Map
+        initialViewState={{
+          longitude: -122,
+          latitude: 37,
+          zoom: 14,
+        }}
+        style={{ width: 600, height: 400 }}
+        mapStyle="mapbox://styles/mapbox/streets-v9"
+      />
     </div>
   );
 }
