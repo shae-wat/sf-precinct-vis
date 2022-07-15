@@ -2,9 +2,18 @@ import React from "react";
 import Map, { Layer } from "react-map-gl";
 
 import "./App.css";
-import precincts from "./precincts.geojson";
 
 import { MAPBOX_TOKEN } from "./tokens";
+
+const precintLayer = {
+  id: "precinct_layer",
+  source: "./precincts.geojson",
+  "source-layer": "./precincts.geojson",
+  type: "line" as "sky",
+  paint: {
+    "fill-color": "#0075DB",
+  },
+};
 
 class App extends React.Component {
   render() {
@@ -23,16 +32,7 @@ class App extends React.Component {
             mapStyle="mapbox://styles/mapbox/light-v10"
             mapboxAccessToken={MAPBOX_TOKEN}
           >
-            <Layer
-              {...{
-                id: "precinct_lines",
-                type: "line",
-                source: precincts,
-                paint: {
-                  "line-color": "#0075DB",
-                },
-              }}
-            />
+            <Layer {...precintLayer} />
           </Map>
         </section>
       </div>
