@@ -1,5 +1,5 @@
 import React from "react";
-import Map, { Marker } from "react-map-gl";
+import Map from "react-map-gl";
 
 import "./App.css";
 
@@ -11,18 +11,17 @@ function App() {
       <header className="App-header">
         <p>SF Precinct Vis</p>
       </header>
-      <Map
-        initialViewState={{
-          latitude: 37.8,
-          longitude: -122.4,
-          zoom: 14,
-        }}
-        style={{ width: 800, height: 600 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-        mapboxAccessToken={MAPBOX_TOKEN}
-      >
-        <Marker longitude={-122.4} latitude={37.8} color="red" />
-      </Map>
+      <section className="Map-container">
+        <Map
+          initialViewState={{
+            latitude: 37.7596,
+            longitude: -122.432,
+            zoom: 12,
+          }}
+          mapStyle="mapbox://styles/mapbox/light-v10"
+          mapboxAccessToken={MAPBOX_TOKEN}
+        ></Map>
+      </section>
     </div>
   );
 }
