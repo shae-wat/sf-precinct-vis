@@ -1,7 +1,9 @@
 import React from "react";
-import Map from "react-map-gl";
+import Map, { Marker } from "react-map-gl";
 
 import "./App.css";
+
+import { MAPBOX_TOKEN } from "./tokens";
 
 function App() {
   return (
@@ -9,16 +11,18 @@ function App() {
       <header className="App-header">
         <p>SF Precinct Vis</p>
       </header>
-
       <Map
         initialViewState={{
-          longitude: -122,
-          latitude: 37,
+          latitude: 37.8,
+          longitude: -122.4,
           zoom: 14,
         }}
-        style={{ width: 600, height: 400 }}
+        style={{ width: 800, height: 600 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
+        mapboxAccessToken={MAPBOX_TOKEN}
+      >
+        <Marker longitude={-122.4} latitude={37.8} color="red" />
+      </Map>
     </div>
   );
 }
