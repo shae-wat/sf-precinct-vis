@@ -1,6 +1,7 @@
 import MapGl, { Source } from "react-map-gl";
-import { MAPBOX_TOKEN } from "../tokens";
+import { MAPBOX_TOKEN } from "../../tokens";
 
+import './Map.css';
 import PrecinctLayer from './PrecinctLayer';
 
 const INITIAL_VIEW_STATE = {
@@ -9,8 +10,9 @@ const INITIAL_VIEW_STATE = {
     zoom: 12,
 }
 
-function Map() {
-    const features = require('../precincts.geojson');
+function Map(props: { flyered: Array<string> }) {
+    const { flyered } = props;
+    const features = require('../../data/precincts.geojson');
     const source = "precinctSource";
     return (
         <section className="Map-container">
@@ -20,7 +22,7 @@ function Map() {
                 mapboxAccessToken={MAPBOX_TOKEN}
             >
                 <Source id={source} type="geojson" data={features}>
-                    <PrecinctLayer source={source} />
+                    <PrecinctLayer source={source} flyered={flyered} />
                 </Source>
             </MapGl>
         </section>

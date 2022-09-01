@@ -1,0 +1,51 @@
+.CSVReader {
+    height: 50px;
+    background: transparent;
+    background-color: #282c34;
+    color: white;
+    padding: 5px;
+}
+
+.CSVReader-zone {
+    align-items: center;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #CCC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    height: 30px;
+}
+
+.CSVReader-zoneHover {
+    border-color: #686868;
+}
+
+.CSVReader-file {
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CSVReader-filename {
+    border-radius: 3px;
+    margin-bottom: 0.5em;
+}
+
+.CSVReader-progressBar {
+    top: 10px;
+    position: absolute;
+}
+
+.CSVReader-remove {
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    right: 0px;
+}
