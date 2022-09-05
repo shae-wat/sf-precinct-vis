@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "sf-precinct-map",
+    "prod": "sf-precinct-map"
+  },
+  "targets": {},
+  "etags": {}
+}
