@@ -1,3 +1,22 @@
+## Usage
+
+Currently, this project is not hosted anywhere, so follow the [local development](#local-development) instructions to run this project locally.
+
+Then, with the app open in your browser, upload a CSV (comma-separated) file that looks like this:
+
+```csv
+prec_2012,flyered
+9151,TRUE
+9134,TRUE
+9152,FALSE
+7101,FALSE
+...
+```
+
+Watch the map update with precincts that have been flyered.
+
+To remove the CSV, click the `x` button or upload a new file.
+
 ## Contributing
 ### Local development
 
