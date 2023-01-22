@@ -1,8 +1,8 @@
+sf-precinct-map.web.app
+
 ## Usage
 
-Currently, this project is not hosted anywhere, so follow the [local development](#local-development) instructions to run this project locally.
-
-Then, with the app open in your browser, upload a CSV (comma-separated) file that looks like this:
+Upload a CSV (comma-separated) file that looks like this:
 
 ```csv
 prec_2012,flyered
